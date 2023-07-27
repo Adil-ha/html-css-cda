@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: yellow;
+  transition: 0.5s;
+}
+/* *************************header****************************** */
+
+header {
+  padding: 50px;
+  background-color: rgb(255, 99, 99);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+nav h1 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* *****************************main***************************** */
+main {
+  height: 75%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 50px;
+}
+.form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form div {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.form div label {
+  text-align: left;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+button {
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid red;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(255, 99, 99);
+  transition: 0.5s;
+  animation: button1 1s infinite linear;
+}
+
+@keyframes button1 {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+img {
+  height: 28vh;
+  width: 50%;
+}
+
+/* **************************Footer************************* */
+
+footer {
+  background-color: rgb(255, 99, 99);
+  padding: 20px;
+}

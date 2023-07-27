@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a a b"
+    "c e d"
+    "c f d";
+  gap: 20px;
+}
+div {
+  min-height: 33%;
+  min-width: 33%;
+}
+
+div:nth-child(1) {
+  grid-area: a;
+}
+div:nth-child(2) {
+  grid-area: b;
+}
+div:nth-child(3) {
+  grid-area: c;
+}
+div:nth-child(4) {
+  grid-area: d;
+}
+div:nth-child(5) {
+  grid-area: f;
+}
+div:nth-child(6) {
+  grid-area: e;
+}
+.image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image > span {
+  position: absolute;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: green;
+  font-size: 3rem;
+}
+
+.image > img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(1);
+  transition: all;
+  transition-duration: 400ms;
+  object-fit: cover;
+  border-radius: 15px;
+
+  /*
+        invert() pour mettre en négatif
+        hue-rotate() pour changer la teinte (valeur en degrés)
+        grayscale() pour mettre en noir et blanc
+        sepia() pour donner un effet sépia à nos images
+
+    */
+}
+
+.image:hover > img {
+  filter: none;
+}
+
+h1 {
+  color: green;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+@media (max-width: 700px) {
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  div {
+    height: 200px;
+  }
+  .image > img {
+    border-radius: 0px;
+  }
+}

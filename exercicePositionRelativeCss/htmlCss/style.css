@@ -1,0 +1,20 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.red {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.blue {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background-color: violet;
+  top: 0px;
+  right: 0px;
+}
